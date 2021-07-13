@@ -1,0 +1,26 @@
+#1. csv File Load
+import csv 
+file = open("c:\\data\\emp2.csv") 
+emp_csv = csv.reader(file) 
+print(emp_csv) 
+for i in emp_csv: 
+    print(i)
+
+#2. Print names and salary if salary is more than 3000 
+for i in emp_csv:  
+    if int(i[5]) >= 3000:
+        print(i[1],i[5])
+
+#3. Ask a name, classify whether high income, middle income, low income
+import csv 
+file = open("c:\\data\\emp2.csv")
+emp_csv = csv.reader(file) 
+a = input("Insert your name") 
+for i in emp_csv: 
+    if i[1] == a: 
+        if int(i[5]) >= 3000: 
+            print('High Income') 
+        elif int(i[5]) >= 2000: 
+            print('Middle Income') 
+        else: 
+            print('Low Income')
