@@ -1,0 +1,53 @@
+#1. Roll a dice once
+import random 
+dice = [1,2,3,4,5,6] 
+print(random.choice(dice))
+
+#2. Flip a coin 10 times 
+import random 
+coin = ['앞', '뒤'] 
+for i in range(10): 
+    print(random.choice(coin))
+
+#3. Possibility of coin's front side coming out
+import random  
+coin = ['front', 'back']  
+cnt = 0  
+for i in range(10):  
+    result = random.choice(coin)  
+    if result == 'front':  
+        cnt=cnt+1  
+print(cnt)
+
+#4. Possibility that 5 side comes out
+import random 
+dice = [1,2,3,4,5,6] 
+cnt=0 
+for i in range(1000): 
+    result = random.choice(dice) 
+    if result == 5: 
+        cnt=cnt +1 
+print(cnt/1000)
+
+#6. Possibilty of 6 from dice, front side from coin coming out at the same time
+import random 
+coin = ['front', 'back'] 
+dice = [1,2,3,4,5,6] 
+cnt=0 
+for i in range(1000): 
+    num1 = random.choice(dice) 
+    num2 = random.choice(coin) 
+    if num1 == 6 and num2 == 'front': 
+        cnt = cnt+1 
+print(cnt/1000)
+
+#7. One Dice Even Number, Another Dice Odd Number
+import random 
+dice = [1,2,3,4,5,6] 
+cnt=0 
+for i in range(10000): 
+    result1 = random.choice(dice) 
+    result2 = random.choice(dice) 
+    if (result1 + result2)%2 == 1: 
+        cnt+=1 
+print(cnt/10000)
