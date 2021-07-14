@@ -1,0 +1,17 @@
+import numpy as np  
+from scipy.stats import norm  
+import matplotlib.pyplot as plt  
+avg=60  
+std=10  
+N=100000  
+sub=np.random.randn(N)*std+avg  
+a=[]  
+for i in range(1000):  
+    a.append(np.random.choice(sub,50))  
+x= np.arange(30,90,0.001)  
+y= norm.pdf(x,np.mean(a), np.std(a))  
+plt.plot(x,y,color='blue') 
+plt.fill_between(x,y,interpolate=True, color='powderblue', alpha=0.7)   
+# interpolate = True: Fill Color
+# alpha: Set transparency
+plt.show()
