@@ -1,0 +1,7 @@
+def greedy(money): 
+    coin=[1,50,100,500] 
+    coin=sorted(coin,reverse=True) 
+    for i in coin: 
+        print('{0}coin {1}'.format(i,money//i)) 
+        money=money%i 
+greedy(54)
