@@ -1,0 +1,8 @@
+import random  
+cnt = 0  
+for i in range(10000):  
+    num1 = random.uniform(0,1)**2  
+    num2 = random.uniform(0,1)**2  
+    if num1 + num2 <= 1:  
+        cnt = cnt + 1  
+print(cnt/10000*4)
