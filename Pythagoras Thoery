@@ -1,0 +1,9 @@
+def pytha(): 
+    import math 
+    a=int(input('Input Base~')) 
+    b=int(input('Input Height~')) 
+    c=int(input('Input Hypotenuse~')) 
+    if math.sqrt(a**2 + b**2) == c: 
+        print('It is a right triangle') 
+    else: 
+        print(It is not a right triangle')
