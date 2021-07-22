@@ -1,0 +1,15 @@
+nums=[1,7,11,12,14,23,33,47,51,64,67,77,139,672,871] 
+def binary_search(nums): 
+    a=int(input('Input number you would like to search~')) 
+    for i in range(len(nums)): 
+        m= np.median(nums) 
+        if a > m: 
+            del nums[:nums.index(m)+1] 
+        elif a<m: 
+            del nums[nums.index(m):] 
+        elif a==m: 
+            return 'Found {0} through {1} times'.format(a,i) 
+            break 
+    else: 
+        return 'There is no {}'.format(a) 
+binary_search(nums)
